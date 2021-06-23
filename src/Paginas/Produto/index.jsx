@@ -20,17 +20,13 @@ const Produto = () => {
             </Link>
             <Link>
                 {produto.preco}
-<<<<<<< HEAD
             </Link>
-=======
-            </a>
-            <a>
+            <Link>
                 Quantidade
-            </a>
+            </Link>
             <button>
                 Adicionar ao carrinho
             </button>
->>>>>>> 787555751958897e4cc0e5cf519f2db5d0b4291d
         </div>
     )
 }
