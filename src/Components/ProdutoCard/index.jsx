@@ -5,7 +5,7 @@ const ProdutoCard = (props) => {
     return (
         <div className="card">
             <img src={props.img} />
-            <div class="card-body">
+            <div className="card-body">
                 <p className="card-text">{props.nome}</p><p className="card-text">{props.preco}</p>
             </div>
             <Link to={`/produto/${props.id}`}>
