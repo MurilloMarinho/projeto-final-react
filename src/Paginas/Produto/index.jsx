@@ -20,6 +20,12 @@ const Produto = () => {
             <a>
                 {produto.preco}
             </a>
+            <a>
+                Quantidade
+            </a>
+            <button>
+                Adicionar ao carrinho
+            </button>
         </div>
     )
 }
