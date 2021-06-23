@@ -1,17 +1,56 @@
 import { useEffect, useState } from "react"
-import http from '../../http'
+import ProdutoCard from "../../Components/ProdutoCard"
 
 const Produtos = () => {
     const [produtos, setProdutos] = useState([])
 
     useEffect(() => {
-        http.get('itens').then((response) => setProdutos(response)).catch(erro => console.log(erro))
+        let teste = [{
+            id: "1",
+            nome: "Draven",
+            preco: "100000,00",
+            img: "https://i.pinimg.com/originals/d1/90/a6/d190a699c83b47691dbb50f5d898e765.png"
+        },
+        {
+            id: "2",
+            nome: "Draven",
+            preco: "100000,00",
+            img: "https://i.pinimg.com/originals/d1/90/a6/d190a699c83b47691dbb50f5d898e765.png"
+        },
+        {
+            id: "3",
+            nome: "Draven",
+            preco: "100000,00",
+            img: "https://i.pinimg.com/originals/d1/90/a6/d190a699c83b47691dbb50f5d898e765.png"
+        },
+        {
+            id: "4",
+            nome: "Draven",
+            preco: "100000,00",
+            img: "https://i.pinimg.com/originals/d1/90/a6/d190a699c83b47691dbb50f5d898e765.png"
+        },
+        {
+            id: "5",
+            nome: "Draven",
+            preco: "100000,00",
+            img: "https://i.pinimg.com/originals/d1/90/a6/d190a699c83b47691dbb50f5d898e765.png"
+        },
+        {
+            id: "6",
+            nome: "Draven",
+            preco: "100000,00",
+            img: "https://i.pinimg.com/originals/d1/90/a6/d190a699c83b47691dbb50f5d898e765.png"
+        }]
+        // http.get('produtos').then((response) => { setProdutos(teste) }).catch(erro => console.log(erro))
+        setProdutos(teste)
+
     }, [])
 
     return (
-        <div>
+        <div className="cardsArea">
             {produtos.map((item) =>
-                <ProdutoCard key={item.id} nome={item.nome} preco={item.preco} />
+                <ProdutoCard key={item.id} id={item.id} nome={item.nome} preco={item.preco} img={item.img} />
+
             )}
         </div>
     )
