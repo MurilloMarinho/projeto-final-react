@@ -24,6 +24,7 @@ const SignIn = () => {
         username: userNameCliente,
         telefone: telefone,
         email: email,
+        dataNascimento: dataNascimento,
         senha: senhaConfirma,
         cpf: cpf,
         cep: cep,
@@ -46,9 +47,9 @@ const SignIn = () => {
     }
     const manipuladorSenhaConfirma = (evento) => {
         if(senha === evento.target.value){
-        setSenhaConfirma(evento.target.value)
-        console.log("senhas diferentes")
-        }
+        setSenhaConfirma(evento.target.value)  
+        console.log('senhas iguais');      
+        }else{console.log("senhas diferentes")}
     }
     
 
@@ -66,7 +67,7 @@ const SignIn = () => {
             </div>
             <div>
                 <label>Senha</label>
-                <input value={senha} onChange={manipuladorSenha} type="password" required/>
+                <input defaultValue={senha} onChange={manipuladorSenha} type="password" required/>
             </div>
             <div>
                 <label>Confirmar Senha</label>
@@ -90,7 +91,7 @@ const SignIn = () => {
             </div>
             <div>
                 <label>CEP</label>
-                <input value={cep} onChange={(evento) => {setCep(evento.target.value)}} type="number" required /*pattern="\d{5}-\d{3}"*//>
+                <input value={cep} onChange={(evento) => {setCep(evento.target.value)}} type="number" required pattern="\d{5}-\d{3}"/>
             </div>
             <div>
                 <label>Rua</label>

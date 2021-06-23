@@ -4,7 +4,7 @@ import "../../Styles/global-styles.css"
 const ProdutoCard = (props) => {
     return (
         <div className="card">
-            <img src={props.img} />
+            <img src={props.img} alt='imagem do produto' />
             <div className="card-body">
                 <p className="card-text">{props.nome}</p><p className="card-text">{props.preco}</p>
             </div>

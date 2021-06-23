@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import http from "../../http"
+import { Link } from "react-router-dom";
 
 const Produto = () => {
     const { id } = useParams()
@@ -14,12 +15,12 @@ const Produto = () => {
 
     return (
         <div>
-            <a>
+            <Link>
                 {produto.nome}
-            </a>
-            <a>
+            </Link>
+            <Link>
                 {produto.preco}
-            </a>
+            </Link>
         </div>
     )
 }
