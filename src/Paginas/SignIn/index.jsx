@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import http from "../../http/index"
+import http from '../../http'
 const SignIn = () => {
 
     const [nome, setNome] = useState('')
@@ -9,9 +9,9 @@ const SignIn = () => {
     const [cep, setCep] = useState('')
     const [rua, setRua] = useState('')
     const [numero, setNumero] = useState('')
-    const [bairro, setBairro] = useState('')    
+    const [bairro, setBairro] = useState('')
     const [cidade, setCidade] = useState('')
-    const [uf, setUf] = useState('')   
+    const [uf, setUf] = useState('')
     const [telefone, setTelefone] = useState('')
     const [userNameCliente, setUserNameCliente] = useState('') 
     const [senhaConfirma, setSenhaConfirma] = useState('') 
