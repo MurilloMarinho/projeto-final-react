@@ -1,5 +1,9 @@
 import { useState } from 'react'
+<<<<<<< HEAD
 import http from '../../http'
+=======
+import http from "../../http/index"
+>>>>>>> 3d4477d86627dbc757589254fa839b70b2ec65e2
 const SignIn = () => {
 
     const [nome, setNome] = useState('')

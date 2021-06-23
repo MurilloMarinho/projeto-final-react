@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import ProdutoCard from "../../Components/ProdutoCard"
+import "./style.css"
 import http from "../../http"
 
 const Produtos = () => {

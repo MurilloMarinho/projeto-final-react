@@ -1,0 +1,10 @@
+
+div.card {
+    width: 50px;
+    margin: 10px;
+    max-width: 200px;
+}
+
+img {
+    max-width: 150px;
+}
