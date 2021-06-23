@@ -10,11 +10,13 @@ import PedidosUser from './Paginas/PedidosUser';
 import PedidosAll from './Paginas/PedidosAll';
 import Cart from './Paginas/Cart';
 import NotFound from './Paginas/NotFound';
+import NavBar from './Components/NavBar';
 
 
 function App() {
   return (
     <Router>
+      <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={LogIn} />
