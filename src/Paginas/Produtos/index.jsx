@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import ProdutoCard from "../../Components/ProdutoCard"
+import http from "../../http"
 
 const Produtos = () => {
     const [produtos, setProdutos] = useState([])
@@ -41,9 +42,8 @@ const Produtos = () => {
             preco: "100000,00",
             img: "https://i.pinimg.com/originals/d1/90/a6/d190a699c83b47691dbb50f5d898e765.png"
         }]
-        // http.get('produtos').then((response) => { setProdutos(teste) }).catch(erro => console.log(erro))
+        http.get('produtos').then((response) => { setProdutos(response.data) }).catch(erro => console.log(erro))
         setProdutos(teste)
-
     }, [])
 
     return (
