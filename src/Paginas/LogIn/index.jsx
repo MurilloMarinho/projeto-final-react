@@ -9,11 +9,11 @@ const LogIn = () => {
     const efetuarLogin = (evento) => {
         evento.preventDefault()
         const usuario ={
-        email: email,
-        senha: senha
+        user: email,
+        pass: senha
         }
         
-        axios.post('http://localhost:8080/login', usuario)
+        axios.post('http://localhost:8080/auth', usuario)
         .then(response => { console.log(response.data)
         localStorage.setItem('token', response.data.token)
         })

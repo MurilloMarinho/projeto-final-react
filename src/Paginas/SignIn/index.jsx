@@ -15,7 +15,8 @@ const SignIn = () => {
     const [telefone, setTelefone] = useState('')
     const [userNameCliente, setUserNameCliente] = useState('') 
     const [senhaConfirma, setSenhaConfirma] = useState('') 
-    const [dataNascimento, setDataNascimento] = useState('') 
+    const [dataNascimento, setDataNascimento] = useState('')  
+    const [complemento, setComplemento] = useState('') 
 
     const efetuarCadastro = (evento) => {
         evento.preventDefault()
@@ -27,12 +28,15 @@ const SignIn = () => {
         dataNascimento: dataNascimento,
         senha: senhaConfirma,
         cpf: cpf,
-        cep: cep,
-        rua: rua,
-        numero: numero,
-        bairro: bairro,
-        cidade: cidade,
-        uf: uf
+        endereco:{
+            cep: cep,
+            rua: rua,
+            numeroResidencia: numero,
+            bairro: bairro,
+            cidade: cidade,
+            uf: uf,
+            complemento: complemento
+        }
         }
         
         
@@ -112,6 +116,10 @@ const SignIn = () => {
             <div>
                 <label>UF</label>
                 <input value={uf} onChange={(evento) => {setUf(evento.target.value)}} type="text" required/>
+            </div>
+            <div>
+                <label>Complemento</label>
+                <input value={complemento} onChange={(evento) => {setComplemento(evento.target.value)}} type="text" required/>
             </div>
             <button>Registrar</button>
         </form>
