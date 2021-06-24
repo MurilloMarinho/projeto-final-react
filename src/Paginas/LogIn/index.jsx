@@ -13,9 +13,9 @@ const LogIn = () => {
         senha: senha
         }
         
-        axios.post('http://localhost:8000/auth', usuario)
+        axios.post('http://localhost:8080/login', usuario)
         .then(response => { console.log(response.data)
-        localStorage.setItem('token', response.data.access_token)
+        localStorage.setItem('token', response.data.token)
         })
         console.log('Formulario foi submetido');
         setEmail('')
@@ -39,10 +39,10 @@ const LogIn = () => {
                 <label>Senha</label>
                 <input value={senha} onChange={manipuladorSenha} type="password" required />
             </div>
-            <button>Registrar</button>
+            <button>Entrar</button>
         </form>
     </div>
-                    )
+    )
 }
 
-                    export default LogIn
+export default LogIn

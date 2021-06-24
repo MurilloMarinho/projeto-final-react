@@ -67,7 +67,7 @@ const SignIn = () => {
             </div>
             <div>
                 <label>Senha</label>
-                <input defaultValue={senha} onChange={manipuladorSenha} type="password" required/>
+                <input defaultValue={senha} onBlur={manipuladorSenha} type="password" required/>
             </div>
             <div>
                 <label>Confirmar Senha</label>
