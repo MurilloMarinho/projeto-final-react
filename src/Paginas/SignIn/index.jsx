@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import http from "../../Components/http";
+import http from "../../http/index";
 const SignIn = () => {
 
     const [nome, setNome] = useState('')
