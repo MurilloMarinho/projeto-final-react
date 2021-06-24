@@ -8,7 +8,7 @@ const ProdutoCard = (props) => {
             <div className="card-body">
                 <p className="card-text">{props.nome}</p><p className="card-text">{props.preco}</p>
             </div>
-            <Link to={`/produto/${props.id}`}>
+            <Link to={`produto/${props.id}`}>
                 <button>Ver mais</button>
             </Link>
         </div>
