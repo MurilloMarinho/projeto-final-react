@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import http from '../../http'
+import './styles.css'
+
 const SignIn = () => {
 
     const [nome, setNome] = useState('')
