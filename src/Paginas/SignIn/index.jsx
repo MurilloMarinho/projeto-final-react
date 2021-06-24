@@ -24,7 +24,7 @@ const SignIn = () => {
         evento.preventDefault()
         const usuario ={
         nome: nome,
-        username: userNameCliente,
+        usuario: userNameCliente,
         telefone: telefone,
         email: email,
         dataNascimento: dataNascimento,
@@ -33,10 +33,10 @@ const SignIn = () => {
         endereco:{
             cep: cep,
             rua: rua,
-            numeroResidencia: numero,
-            bairro: bairro,
-            cidade: cidade,
-            uf: uf,
+          bairro: bairro,
+          cidade: cidade,
+          uf: uf,
+          numero: numero,
             complemento: complemento
         }
         }

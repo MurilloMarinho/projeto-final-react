@@ -33,7 +33,7 @@ const LogIn = () => {
         <form onSubmit={efetuarLogin}>
             <div>
                 <label>Email</label>
-                <input value={email} onChange={manipuladorEmail} type="email" required />
+                <input value={email} onChange={manipuladorEmail} type="text" required />
             </div>
             <div>
                 <label>Senha</label>
